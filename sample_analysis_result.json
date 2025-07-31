@@ -1,0 +1,65 @@
+{
+  "document_info": {
+    "filename": "ABC_Partnership_Agreement.pdf",
+    "pages": 47,
+    "analysis_date": "2025-07-31",
+    "confidence_score": 0.92
+  },
+  "extracted_components": {
+    "partners": [
+      {
+        "name": "ABC Management LLC",
+        "type": "General Partner",
+        "ownership": "2%"
+      },
+      {
+        "name": "Institutional Investor Fund",
+        "type": "Limited Partner",
+        "ownership": "98%"
+      }
+    ],
+    "distribution_waterfall": {
+      "tier_1": "Return of capital contributions - 100% to LPs",
+      "tier_2": "8% preferred return - 100% to LPs",
+      "tier_3": "Catchup - 100% to GP until 20% total return",
+      "tier_4": "Carried interest - 20% GP, 80% LPs"
+    },
+    "capital_calls": {
+      "notice_period": "45 days",
+      "default_interest": "12% per annum",
+      "remedies": [
+        "Dilution",
+        "Suspension of rights"
+      ]
+    },
+    "special_allocations": [
+      "Depreciation allocated 90% to LPs",
+      "Section 704(c) gain allocated to contributing partner",
+      "Minimum gain chargeback provisions included"
+    ]
+  },
+  "tax_software_mapping": {
+    "form_1065_allocations": {
+      "ordinary_income": "Pro rata based on ownership",
+      "capital_gains": "Per waterfall provisions",
+      "depreciation": "90% to LPs per special allocation"
+    },
+    "schedule_k1_items": [
+      {
+        "line": "1",
+        "description": "Ordinary business income",
+        "allocation_method": "waterfall"
+      },
+      {
+        "line": "9a",
+        "description": "Net long-term capital gain",
+        "allocation_method": "waterfall"
+      },
+      {
+        "line": "12",
+        "description": "Section 179 deduction",
+        "allocation_method": "special"
+      }
+    ]
+  }
+}

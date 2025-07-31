@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PartnershipAI - NLP Partnership Agreement Analysis Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h2>PartnershipAI</h2>
+            </div>
+            <div class="navbar-nav">
+                <button class="nav-link active" data-section="dashboard">Dashboard</button>
+                <button class="nav-link" data-section="analysis">Analysis</button>
+                <button class="nav-link" data-section="integration">Integration</button>
+                <button class="nav-link" data-section="results">Results</button>
+                <button class="nav-link" data-section="settings">Settings</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <h1>AI-Powered Partnership Agreement Analysis</h1>
+                    <p>Automatically extract distribution waterfalls, preferred returns, capital call provisions, and special allocation rules from partnership agreements using advanced NLP technology.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>1,247</h3>
+                            <p>Documents Processed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>94.2%</h3>
+                            <p>Accuracy Rate</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4.5 hrs</h3>
+                            <p>Time Saved per Doc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Architecture -->
+                <div class="card architecture-card">
+                    <div class="card__header">
+                        <h3>NLP Processing Workflow</h3>
+                    </div>
+                    <div class="card__body">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/9188991b71e06ca7b9923a0d1b678942/be08e059-f025-4625-8009-d21ba12ba374/99a8ee28.png" alt="NLP Workflow Architecture" class="workflow-diagram">
+                    </div>
+                </div>
+
+                <!-- Upload Area -->
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📄</div>
+                        <h3>Upload Partnership Agreement</h3>
+                        <p>Drag and drop your PDF or DOC files here, or click to browse</p>
+                        <input type="file" id="fileInput" accept=".pdf,.doc,.docx" multiple>
+                        <button class="btn btn--primary" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                    </div>
+                </div>
+
+                <!-- Recent Analysis Results -->
+                <div class="recent-results">
+                    <h3>Recent Analysis Results</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h4>ABC_Partnership_Agreement.pdf</h4>
+                                <span class="status status--success">Complete</span>
+                            </div>
+                            <div class="result-details">
+                                <p><strong>Confidence:</strong> 92%</p>
+                                <p><strong>Components:</strong> 4 extracted</p>
+                                <p><strong>Processed:</strong> July 31, 2025</p>
+                            </div>
+                            <button class="btn btn--sm btn--outline">View Details</button>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h4>XYZ_LLC_Operating_Agreement.pdf</h4>
+                                <span class="status status--warning">Processing</span>
+                            </div>
+                            <div class="result-details">
+                                <p><strong>Progress:</strong> 67%</p>
+                                <p><strong>Stage:</strong> Entity Extraction</p>
+                                <p><strong>Started:</strong> 2 minutes ago</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysis" class="section">
+            <div class="container">
+                <h2>Document Analysis</h2>
+                
+                <!-- Processing Status -->
+                <div class="processing-status">
+                    <h3>Processing: ABC_Partnership_Agreement.pdf</h3>
+                    <div class="processing-stages">
+                        <div class="stage completed">
+                            <div class="stage-icon">✓</div>
+                            <span>Document Upload</span>
+                        </div>
+                        <div class="stage completed">
+                            <div class="stage-icon">✓</div>
+                            <span>Text Extraction</span>
+                        </div>
+                        <div class="stage active">
+                            <div class="stage-icon">⟳</div>
+                            <span>NLP Analysis</span>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-icon">○</div>
+                            <span>Component Extraction</span>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-icon">○</div>
+                            <span>Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extracted Components -->
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>Distribution Waterfall</h4>
+                            <span class="confidence-score">Confidence: 95%</span>
+                        </div>
+                        <div class="component-content">
+                            <ul>
+                                <li>Return of capital contributions - 100% to LPs</li>
+                                <li>8% preferred return - 100% to LPs</li>
+                                <li>Catchup - 100% to GP until 20% total return</li>
+                                <li>Carried interest - 20% GP, 80% LPs</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--sm btn--outline edit-component">Edit</button>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>Preferred Return</h4>
+                            <span class="confidence-score">Confidence: 88%</span>
+                        </div>
+                        <div class="component-content">
+                            <p><strong>Rate:</strong> 8% annually</p>
+                            <p><strong>Method:</strong> Cumulative compound</p>
+                            <p><strong>Calculation:</strong> Based on capital contributions</p>
+                        </div>
+                        <button class="btn btn--sm btn--outline edit-component">Edit</button>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>Capital Call Provisions</h4>
+                            <span class="confidence-score">Confidence: 92%</span>
+                        </div>
+                        <div class="component-content">
+                            <p><strong>Notice Period:</strong> 45 days</p>
+                            <p><strong>Default Interest:</strong> 12% per annum</p>
+                            <p><strong>Remedies:</strong> Dilution, suspension of rights</p>
+                        </div>
+                        <button class="btn btn--sm btn--outline edit-component">Edit</button>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>Special Allocations</h4>
+                            <span class="confidence-score">Confidence: 86%</span>
+                        </div>
+                        <div class="component-content">
+                            <ul>
+                                <li>Depreciation allocated 90% to LPs</li>
+                                <li>Section 704(c) gain allocated to contributing partner</li>
+                                <li>Minimum gain chargeback provisions included</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--sm btn--outline edit-component">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Section -->
+        <section id="integration" class="section">
+            <div class="container">
+                <h2>Tax Software Integration</h2>
+                
+                <!-- Available Platforms -->
+                <div class="platforms-grid">
+                    <div class="platform-card active">
+                        <h4>GoSystem Tax</h4>
+                        <p>REST API integration with real-time sync</p>
+                        <span class="status status--success">Connected</span>
+                        <button class="btn btn--primary configure-platform" data-platform="gosystem">Configure</button>
+                    </div>
+                    <div class="platform-card">
+                        <h4>Thomson Reuters UlaTax</h4>
+                        <p>API and data export/import support</p>
+                        <span class="status status--info">Available</span>
+                        <button class="btn btn--outline configure-platform" data-platform="thomson">Setup</button>
+                    </div>
+                    <div class="platform-card">
+                        <h4>CCH Axcess</h4>
+                        <p>Web services and batch processing</p>
+                        <span class="status status--info">Available</span>
+                        <button class="btn btn--outline configure-platform" data-platform="cch">Setup</button>
+                    </div>
+                </div>
+
+                <!-- Mapping Configuration -->
+                <div class="mapping-config">
+                    <h3>Form 1065 Mapping Configuration</h3>
+                    <div class="mapping-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Partnership Component</th>
+                                    <th>Form 1065 Line</th>
+                                    <th>Schedule K-1 Line</th>
+                                    <th>Allocation Method</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ordinary Business Income</td>
+                                    <td>Line 1</td>
+                                    <td>Line 1</td>
+                                    <td>Waterfall</td>
+                                    <td><span class="status status--success">Mapped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Capital Gains</td>
+                                    <td>Line 4</td>
+                                    <td>Line 9a</td>
+                                    <td>Waterfall</td>
+                                    <td><span class="status status--success">Mapped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Depreciation</td>
+                                    <td>Line 20</td>
+                                    <td>Line 12</td>
+                                    <td>Special (90% LPs)</td>
+                                    <td><span class="status status--warning">Review</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Preferred Returns</td>
+                                    <td>Schedule K</td>
+                                    <td>Line 1</td>
+                                    <td>8% Annual</td>
+                                    <td><span class="status status--success">Mapped</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="integration-actions">
+                        <button class="btn btn--primary export-config">Export Configuration</button>
+                        <button class="btn btn--outline validate-mapping">Validate Mapping</button>
+                        <button class="btn btn--secondary sync-data">Sync to GoSystem</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section">
+            <div class="container">
+                <h2>Analytics Dashboard</h2>
+                
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h3>1,247</h3>
+                        <p>Total Documents</p>
+                        <span class="trend positive">+12% this month</span>
+                    </div>
+                    <div class="summary-card">
+                        <h3>94.2%</h3>
+                        <p>Average Accuracy</p>
+                        <span class="trend positive">+2.1% improvement</span>
+                    </div>
+                    <div class="summary-card">
+                        <h3>3.2 min</h3>
+                        <p>Avg Processing Time</p>
+                        <span class="trend negative">-0.3 min faster</span>
+                    </div>
+                    <div class="summary-card">
+                        <h3>5,611 hrs</h3>
+                        <p>Total Time Saved</p>
+                        <span class="trend positive">+15% this quarter</span>
+                    </div>
+                </div>
+
+                <!-- Common Partnership Structures -->
+                <div class="structures-analysis">
+                    <h3>Common Partnership Structures</h3>
+                    <div class="structures-grid">
+                        <div class="structure-item">
+                            <h4>American Waterfall</h4>
+                            <div class="structure-bar">
+                                <div class="structure-fill" style="width: 65%"></div>
+                            </div>
+                            <span>65% of documents</span>
+                        </div>
+                        <div class="structure-item">
+                            <h4>European Waterfall</h4>
+                            <div class="structure-bar">
+                                <div class="structure-fill" style="width: 28%"></div>
+                            </div>
+                            <span>28% of documents</span>
+                        </div>
+                        <div class="structure-item">
+                            <h4>Deal-by-Deal</h4>
+                            <div class="structure-bar">
+                                <div class="structure-fill" style="width: 7%"></div>
+                            </div>
+                            <span>7% of documents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accuracy by Component -->
+                <div class="accuracy-analysis">
+                    <h3>Accuracy by Component Type</h3>
+                    <div class="accuracy-grid">
+                        <div class="accuracy-item">
+                            <span>Distribution Waterfall</span>
+                            <div class="accuracy-score">96.2%</div>
+                        </div>
+                        <div class="accuracy-item">
+                            <span>Preferred Returns</span>
+                            <div class="accuracy-score">94.8%</div>
+                        </div>
+                        <div class="accuracy-item">
+                            <span>Capital Calls</span>
+                            <div class="accuracy-score">92.1%</div>
+                        </div>
+                        <div class="accuracy-item">
+                            <span>Special Allocations</span>
+                            <div class="accuracy-score">91.5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section">
+            <div class="container">
+                <h2>Settings & Configuration</h2>
+                
+                <div class="settings-grid">
+                    <!-- NLP Model Settings -->
+                    <div class="settings-card">
+                        <h3>NLP Model Configuration</h3>
+                        <div class="form-group">
+                            <label class="form-label">Primary Model</label>
+                            <select class="form-control">
+                                <option selected>LegalBERT v2.1</option>
+                                <option>Custom Partnership Model</option>
+                                <option>FinanceBERT</option>
+                                <option>ContractBERT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confidence Threshold</label>
+                            <input type="range" min="70" max="99" value="85" class="form-control">
+                            <span>85%</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Entity Extraction</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked> Distribution Waterfall</label>
+                                <label><input type="checkbox" checked> Preferred Returns</label>
+                                <label><input type="checkbox" checked> Capital Calls</label>
+                                <label><input type="checkbox" checked> Special Allocations</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tax Software API -->
+                    <div class="settings-card">
+                        <h3>Tax Software APIs</h3>
+                        <div class="api-config">
+                            <div class="api-item">
+                                <span>GoSystem Tax</span>
+                                <span class="status status--success">Connected</span>
+                                <button class="btn btn--sm btn--outline">Configure</button>
+                            </div>
+                            <div class="api-item">
+                                <span>Thomson Reuters</span>
+                                <span class="status status--error">Disconnected</span>
+                                <button class="btn btn--sm btn--primary">Connect</button>
+                            </div>
+                            <div class="api-item">
+                                <span>CCH Axcess</span>
+                                <span class="status status--error">Disconnected</span>
+                                <button class="btn btn--sm btn--primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Preferences -->
+                    <div class="settings-card">
+                        <h3>User Preferences</h3>
+                        <div class="form-group">
+                            <label class="form-label">Default Tax Software</label>
+                            <select class="form-control">
+                                <option selected>GoSystem Tax</option>
+                                <option>Thomson Reuters</option>
+                                <option>CCH Axcess</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Processing Priority</label>
+                            <select class="form-control">
+                                <option selected>Accuracy</option>
+                                <option>Speed</option>
+                                <option>Balanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><input type="checkbox" checked> Auto-export to tax software</label>
+                            <label><input type="checkbox"> Email notifications</label>
+                            <label><input type="checkbox" checked> Save processing logs</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-actions">
+                    <button class="btn btn--primary">Save Settings</button>
+                    <button class="btn btn--outline">Reset to Defaults</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Edit Component Modal -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Edit Component</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Component Data</label>
+                    <textarea class="form-control" rows="8" id="componentData"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confidence Score</label>
+                    <input type="range" min="0" max="100" value="85" class="form-control" id="confidenceSlider">
+                    <span id="confidenceValue">85%</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--primary save-component">Save Changes</button>
+                <button class="btn btn--outline cancel-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

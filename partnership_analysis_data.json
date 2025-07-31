@@ -1,0 +1,159 @@
+{
+  "partnership_components": {
+    "distribution_waterfall": {
+      "description": "Method of allocating capital gains between limited and general partners",
+      "typical_structure": [
+        "Return of capital contributions",
+        "Preferred return (6-10% annually)",
+        "Catchup provision (GP receives larger share)",
+        "Carried interest split (typically 20% to GP, 80% to LPs)"
+      ],
+      "variations": [
+        "American waterfall",
+        "European waterfall",
+        "Deal-by-deal",
+        "Fund-as-a-whole"
+      ],
+      "tax_implications": "Affects timing and character of income recognition"
+    },
+    "preferred_return": {
+      "description": "Minimum return threshold paid to limited partners before GP receives promoted interest",
+      "typical_rates": "6-10% annually",
+      "calculation_methods": [
+        "Simple interest",
+        "Compound interest",
+        "Cumulative",
+        "Non-cumulative"
+      ],
+      "example_calculation": {
+        "capital_contribution": 1000000,
+        "preferred_rate": 0.08,
+        "annual_preferred_return": 80000
+      }
+    },
+    "capital_call_provisions": {
+      "description": "Formal requests for additional member contributions beyond initial investment",
+      "trigger_conditions": [
+        "Insufficient operating capital",
+        "New investment opportunities",
+        "Unexpected expenses",
+        "Debt service obligations"
+      ],
+      "notice_requirements": "Typically 30-60 days advance notice",
+      "default_remedies": [
+        "Interest penalties",
+        "Suspension of voting rights",
+        "Dilution of ownership",
+        "Forced sale of interests"
+      ]
+    },
+    "special_allocations": {
+      "description": "Tax allocations disproportionate to ownership percentages",
+      "common_types": [
+        "Depreciation allocations",
+        "Section 704(c) allocations",
+        "Minimum gain chargeback",
+        "Qualified income offset"
+      ],
+      "irs_requirements": [
+        "Substantial economic effect",
+        "Reflects partners' interests in the partnership",
+        "Compliance with Section 704(b) regulations"
+      ],
+      "documentation_needed": "Detailed capital account maintenance"
+    }
+  },
+  "tax_software_integration": {
+    "supported_platforms": [
+      {
+        "name": "GoSystem Tax",
+        "api_available": true,
+        "supported_forms": [
+          "1065",
+          "1040",
+          "1041",
+          "1120"
+        ],
+        "integration_methods": [
+          "REST API",
+          "Direct data import",
+          "Real-time sync"
+        ]
+      },
+      {
+        "name": "Thomson Reuters UlaTax",
+        "api_available": true,
+        "supported_forms": [
+          "1065",
+          "1120S",
+          "990"
+        ],
+        "integration_methods": [
+          "API",
+          "Data export/import"
+        ]
+      },
+      {
+        "name": "CCH Axcess",
+        "api_available": true,
+        "supported_forms": [
+          "1065",
+          "1120",
+          "1041"
+        ],
+        "integration_methods": [
+          "Web services",
+          "Batch processing"
+        ]
+      }
+    ],
+    "data_mapping": {
+      "partnership_income": "Form 1065, Line 1",
+      "ordinary_business_income": "Schedule K, Line 1",
+      "capital_gains": "Schedule K, Line 9a",
+      "special_allocations": "Schedule K-1, various lines",
+      "partner_capital_accounts": "Schedule L, capital section"
+    }
+  },
+  "nlp_model_specs": {
+    "base_models": [
+      {
+        "name": "LegalBERT",
+        "description": "BERT model pre-trained on 12GB of legal text",
+        "strengths": [
+          "Legal terminology",
+          "Contract analysis",
+          "Case law"
+        ],
+        "use_case": "Base understanding of legal language"
+      },
+      {
+        "name": "Custom Partnership Model",
+        "description": "Fine-tuned model for partnership agreement analysis",
+        "training_data": "10,000+ partnership agreements",
+        "accuracy": "94% for key term extraction"
+      }
+    ],
+    "extraction_targets": [
+      "Partner names and roles",
+      "Capital contribution amounts",
+      "Profit/loss allocation ratios",
+      "Distribution waterfall terms",
+      "Preferred return rates",
+      "Capital call provisions",
+      "Special allocation clauses",
+      "Management fee structures"
+    ],
+    "named_entities": [
+      "PERSON",
+      "ORGANIZATION",
+      "MONEY",
+      "PERCENT",
+      "DATE",
+      "LEGAL_ENTITY",
+      "JURISDICTION",
+      "CONTRACT_TERM",
+      "TAX_PROVISION"
+    ]
+  }
+}
